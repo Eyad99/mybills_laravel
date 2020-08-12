@@ -1,0 +1,25 @@
+body, h1, h2, h3, h4, h5, h6
+{
+ /*   font-family: 'Lalezar', cursive !important;*/
+    font-family: 'Cairo', sans-serif !important;
+
+    font-size: 16px !important;
+}
+
+
+.bg-light
+{
+    background-color: #e0e0e0 !important;
+}
+.md-form label {
+    left:0px  
+}
+.md-form.md-outline .prefix{
+    position: relative;
+    float: left
+}
+.md-form .prefix{
+    float: left;
+    position: relative;
+    top: 10px
+}

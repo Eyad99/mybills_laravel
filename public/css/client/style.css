@@ -1,0 +1,176 @@
+:root{
+    --color_dark_black:#000000;
+    --colo_dark_bule:#163172;
+    --colo_light_bule:#1e559f;
+    --color_light_nav:#d6e4f0;
+    --color_l_nav:#ffffffd5;
+    --color_w:#fff;
+    --color_n:#28718c;
+
+}
+
+/************************************
+SKELETON
+************************************/
+
+body {
+   /* background-color: #EDE7E5;*/
+    font-size: 18px;
+    color: #17a2b8 !important;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+
+/************************************
+MODULEs
+************************************/
+
+
+.milestone-counter{
+    background-color: var(--colo_dark_bule) !important;
+}
+
+.milestone-counter {
+    padding: 10px;
+    margin: 0 0 5px;
+}
+
+.milestones hr {
+    border-color: var(--color_w);
+}
+
+.milestone-counter img {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.milestone-counter h3 {
+    font-size: 30px;
+    margin-bottom: 0px;
+    color: var(--color_w);
+}
+
+.milestone-counter p {
+    font-size: 14px;
+    color: var(--color_w);
+    text-transform: uppercase;
+}
+.alignleft {
+    float: left;
+    margin: 10px 20px 20px 0;
+}
+
+
+
+
+/************************************
+SERVICES & CASE
+************************************/
+
+
+.service-list .col-md-4 {
+    margin: 15px 0;
+}
+
+
+.service-wrapper i {
+    background: var(--color_w);
+    border-radius: 500px;
+    color: var(--color_w);
+    border: 1px dashed var(--color_w);
+    display: block;
+    font-size: 28px;
+    height: 70px;
+    margin: 0 auto;
+    line-height: 70px;
+    position: relative;
+    text-align: center;
+    width: 70px;
+}
+
+.service-wrapper p {
+    margin-bottom: 10px;
+    color: #0b509e;
+}
+
+.service-wrapper h4 {
+    font-weight: 600;
+    font-size: 21px;
+    padding: 10px 0 15px;
+    color: #232323;
+    margin: 0;
+}
+
+.service-wrapper h4 a {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+
+
+.panel-heading{
+font-size: 18px;
+background-color: var(--colo_dark_bule)  !important;
+border: none;
+color: white !important;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+.panel-body{
+    padding: 10px !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.panel-body h3{
+    font-size: 17px;
+
+}
+.panel-body p{
+    color: var(--colo_dark_bule);
+    font-weight: 600;
+
+}
+
+
+/************************************
+RESPONSIVE
+************************************/
+
+@media (min-width: 992px) {
+    .alignleft{
+        width: 14%;
+    }
+    
+    .widthimage{
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+
+    .alignleft{
+        width: 11%;
+    }
+
+    .widthimage{
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+
+    .alignleft{
+        width: 14%;
+    }
+
+    .widthimage{
+        width: 15%;
+    }
+}
