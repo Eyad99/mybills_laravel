@@ -28,6 +28,17 @@
                          @enderror()
                     </div>
 
+                    <div class="md-form">
+                        <i class="fas fa-envelope prefix"></i>
+                        <input type="text" id="inputIconEx1" class="form-control @error('email') is-invalid @enderror" value="{{$Client->email}}"  name="email">
+                        <label for="inputIconEx1">@lang('site.email')</label>
+                          @error('email')
+                            <div class=" alert-sm alert-danger mt-1">
+                                {{$message}}
+                            </div>
+                         @enderror()
+                    </div>
+
 
                     <div class="md-form">
                         <i class="fas fa-unlock-alt prefix"></i>

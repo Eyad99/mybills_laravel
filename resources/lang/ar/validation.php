@@ -153,6 +153,7 @@ return [
         'last_name'             => 'اسم العائلة',
         'password'              => 'كلمة المرور',
         'password_confirmation' => 'تأكيد كلمة المرور',
+        'current_password'      => 'كلمة السر الحالية',
         'city'                  => 'المدينة',
         'country'               => 'الدولة',
         'address'               => 'عنوان السكن',
@@ -178,5 +179,6 @@ return [
         'purchase_price'        => 'سعر البيع',
         'sale_price'            => 'سعر الشراء',
         'stock'                 => 'ستوك ',
+        'text_question'         => 'نص السؤال',
     ],
 ];

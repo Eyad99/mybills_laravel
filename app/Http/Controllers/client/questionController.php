@@ -9,6 +9,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Validation\Rule;
+
 
 class questionController extends Controller
 {
