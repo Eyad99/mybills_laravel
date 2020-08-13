@@ -4,7 +4,6 @@
 @section('content')
 
     @if(session()->has('success'))
-
         <div class="alert alert-info">
             {{session()->get('success')}}
         </div>
@@ -29,50 +28,50 @@
 
                       <div class="md-form">
                         <i class="far fa-id-card prefix "></i>
-                        <input type="text" id="inputIconEx1" class="form-control @error('id_number') is-invalid @enderror" value="{{ old('id_number') }}" name="id_number" autocomplete="off">
-                        <label for="inputIconEx1">@lang('site.id_number')</label>
+                        <input type="text" id="inputIconEx2" class="form-control @error('id_number') is-invalid @enderror" value="{{ old('id_number') }}" name="id_number" autocomplete="off">
+                        <label for="inputIconEx2">@lang('site.id_number')</label>
                       </div>
 
                     <div class="md-form">
                         <i class="fas fa-user prefix"></i>
-                        <input type="text" id="inputIconEx2" class="form-control @error('user_name') is-invalid @enderror" value="{{ old('user_name') }}" name="user_name" autocomplete="off">
-                        <label for="inputIconEx2">@lang('site.user_name')</label>
+                        <input type="text" id="inputIconEx3" class="form-control @error('user_name') is-invalid @enderror" value="{{ old('user_name') }}" name="user_name" autocomplete="off">
+                        <label for="inputIconEx3">@lang('site.user_name')</label>
                     </div>
 
                     <div class="md-form">
                         <i class="fas fa-user prefix"></i>
-                        <input type="text" id="inputIconEx1" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" autocomplete="off">
-                        <label for="inputIconEx1">@lang('site.name')</label>
+                        <input type="text" id="inputIconEx4" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" autocomplete="off">
+                        <label for="inputIconEx4">@lang('site.name')</label>
                       </div>
 
                     <div class="md-form">
                         <i class="fas fa-envelope prefix"></i>
-                        <input type="text" id="inputIconEx2" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" autocomplete="off">
-                        <label for="inputIconEx2">@lang('site.email')</label>
+                        <input type="text" id="inputIconEx5" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" autocomplete="off">
+                        <label for="inputIconEx5">@lang('site.email')</label>
                     </div>
 
                     <div class="md-form">
                         <i class="fas fa-user-lock prefix"></i>
-                        <input type="password" id="inputIconEx1" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
-                        <label for="inputIconEx1">@lang('site.password')</label>
+                        <input type="password" id="inputIconEx6" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password">
+                        <label for="inputIconEx6">@lang('site.password')</label>
                       </div>
 
                     <div class="md-form">
                         <i class="fas fa-user-lock prefix"></i>
-                        <input type="password" id="inputIconEx2" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation">
-                        <label for="inputIconEx2">@lang('site.password_confirmation')</label>
+                        <input type="password" id="inputIconEx7" class="form-control @error('password_confirmation') is-invalid @enderror" name="password_confirmation">
+                        <label for="inputIconEx7">@lang('site.password_confirmation')</label>
                     </div>
 
                     <div class="md-form">
                         <i class="fas fa-phone-alt prefix"></i>
-                       <input type="text" id="inputIconEx1" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" name="phone" autocomplete="off">
-                        <label for="inputIconEx1">@lang('site.Phone')</label>
+                       <input type="text" id="inputIconEx8" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" name="phone" autocomplete="off">
+                        <label for="inputIconEx8">@lang('site.Phone')</label>
                     </div>
 
                     <div class="md-form">
                         <i class="fas fa-city prefix"></i>
-                        <input type="text" id="inputValidationEx2" class="form-control @error('city') is-invalid @enderror" value="{{ old('city') }}" name="city" autocomplete="off">
-                        <label for="inputValidationEx2" data-error="wrong">@lang('site.city')</label>
+                        <input type="text" id="inputValidationEx9" class="form-control @error('city') is-invalid @enderror" value="{{ old('city') }}" name="city" autocomplete="off">
+                        <label for="inputValidationEx9" data-error="wrong">@lang('site.city')</label>
                     </div>
 
                     <div class="md-form">
@@ -102,22 +101,20 @@
                         <tbody>
                             @foreach($models as $index=>$model)
                         <tr>
-                            <td class="pt-3-half"><a class="" data-toggle="tab">@lang('site.' . $model)</a></td>
+                            <td class="pt-3-half">@lang('site.' . $model)</td>
                         </tr>
                         <tr>
                             <td class="pt-3-half">
 
                                 @foreach($options as $option)
-                                @if ($option=='send' && ($model=='users' || $model=='places'))
-                                 <div >&nbsp;</div>
-                                @else
-                                <input class=" ml-2" type="checkbox" name="permissions[]" value="{{$option}}_{{$model}}">
+                                    @if ($option=='send' && ($model=='users' || $model=='places'))
+                                    <div >&nbsp;</div>
+                                    @else
+                                    
+                                    <input class=" ml-2" type="checkbox" name="permissions[]" value="{{$option}}_{{$model}}">
+                                    <label class=" ml-2">@lang('site.'.$option)</label>
 
-
-                                <label class=" ml-2">@lang('site.'.$option)</label>
-
-
-                                @endif
+                                    @endif
 
                                 @endforeach
                             </td>

@@ -12,13 +12,13 @@
 <!-- Default form Add -->
 
 
-        <section class="mt-5">
+        <section class="mt-5 z-depth-5">
               <h5 class="card-header light-blue darken-1 white-text text-center py-4">
                 <strong>@lang('site.questionAwaitingTheAnswer')</strong>
                 <i class="fas fa-user"></i>
               </h5>
 
-            <div class="row white-text ">
+            <div class="row white-text mt-2">
 
                     <div class="col-xl-6 col-md-12 col-lg-6 col-sm-12 mb-4">
                         <div class="card-header text-center">

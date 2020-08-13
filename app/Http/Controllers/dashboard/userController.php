@@ -50,7 +50,7 @@ class userController extends Controller
             session()->flash('success', __('site.msg_add'));
             return redirect(route('dashboard.user.index'));
         } else {
-            session()->flash('success', 'الرقم الوطني ورقم الحساب غير متطابقين');   
+            session()->flash('success', __('site.msg_not_complete'));   
             return redirect(route('dashboard.user.create'));
         }
     }

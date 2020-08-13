@@ -53,8 +53,8 @@
                             <form action="{{route('new.water')}}" method="get">
 
                                 <div class="md-form form-sm">
-                                <input id="form-bg-sm" class="form-control form-control-sm @error('counter_number') is-invalid @enderror" type="text" name="counter_number" >
-                                <label for="form-bg-sm">@lang('site.Counter_number')</label>
+                                <input id="form-bg-sm1" class="form-control form-control-sm @error('counter_number') is-invalid @enderror" type="text" name="counter_number" >
+                                <label for="form-bg-sm1">@lang('site.Counter_number')</label>
                                 </div>
 
                                 @error('counter_number')
@@ -76,8 +76,8 @@
                             <form action="{{route('new.telecome')}}" method="get">
 
                                 <div class="md-form form-sm">
-                                <input id="form-bg-sm" class="form-control form-control-sm @error('phone_number') is-invalid @enderror" type="text" name="phone_number" >
-                                <label for="form-bg-sm">@lang('site.Phone_number')</label>
+                                <input id="form-bg-sm2" class="form-control form-control-sm @error('phone_number') is-invalid @enderror" type="text" name="phone_number" >
+                                <label for="form-bg-sm2">@lang('site.Phone_number')</label>
                                 </div>
 
                                 @error('phone_number')

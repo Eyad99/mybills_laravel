@@ -146,6 +146,24 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name'                  => 'name',
+        'bank_id'               => 'bank id',
+        'user_name'             => 'user name',
+        'id_number'             => 'id number',
+        'permissions'           => 'permissions',
+        'hour_number'           => 'hour number',
+        'counter_number'        => 'counter number',
+        'phone_number'          => 'phone number',
+        'center_type'           => 'center type',
+        'name_en'               => 'the name in english',
+        'lat_lag'               => 'Coordinates',
+        'location'              => 'location',
+        'location_en'           => 'The location in English',
+        'text_answer'           => 'The answer',
+        'text_question_en'      => 'The question in English',
+        'text_answer_en'        => 'The answer in English',
+        'current_password'      => 'current password',
+    ],
 
 ];

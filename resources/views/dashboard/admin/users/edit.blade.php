@@ -17,7 +17,7 @@
                     <i class="fas fa-user"></i>
                 </h5>
                 <!-- Form -->
-                <form class="border border-light p-5" style="color: #757575;" action="{{route('dashboard.user.update',$user->id)}}" method="post" enctype="multipart/form-data">
+                <form class="border border-light-5 p-5" style="color: #757575;" action="{{route('dashboard.user.update',$user->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 

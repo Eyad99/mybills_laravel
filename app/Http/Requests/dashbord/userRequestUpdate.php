@@ -30,7 +30,6 @@ class userRequestUpdate extends FormRequest
             'name' => ['required', 'string', 'min:3', 'max:20'],
             'user_name' => ['required', 'string', 'min:3','max:30',Rule::unique('users')->ignore($this->user_name,'user_name')],
             'phone' => ['required', 'string', 'min:8'],
-           
             'city' => ['required', 'string', ],
             'gender' => ['required', 'numeric'],
         ];

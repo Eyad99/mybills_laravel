@@ -22,25 +22,25 @@
                       <div class="md-form">
                         <i class="fas fa-place-of-worship prefix"></i>          
                         <input type="text" id="inputIconEx1" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" name="name" autocomplete="off">
-                        <label for="inputIconEx1">@lang('site.center_name_t')</label>
+                        <label for="inputIconEx1">@lang('site.center_name')</label>
                       </div>
 
                       <div class="md-form">
                         <i class="fas fa-map-marked prefix"></i>
                         <input type="text" id="inputIconEx2" class="form-control @error('location') is-invalid @enderror" value="{{ old('location') }}" name="location" autocomplete="off">
-                        <label for="inputIconEx2">@lang('site.location_t')</label>
+                        <label for="inputIconEx2">@lang('site.location')</label>
                       </div>
 
                       <div class="md-form">
                         <i class="fas fa-place-of-worship prefix"></i>          
                         <input type="text" id="inputIconEx3" class="form-control @error('name_en') is-invalid @enderror" value="{{ old('name_en') }}" name="name_en" autocomplete="off">
-                        <label for="inputIconEx3">@lang('site.center_name_t')</label>
+                        <label for="inputIconEx3">@lang('site.center_name_en')</label>
                       </div>
 
                       <div class="md-form">
                         <i class="fas fa-map-marked prefix"></i>
                         <input type="text" id="inputIconEx4" class="form-control @error('location_en') is-invalid @enderror" value="{{ old('location_en') }}" name="location_en" autocomplete="off">
-                        <label for="inputIconEx4">@lang('site.location_t')</label>
+                        <label for="inputIconEx4">@lang('site.location_en')</label>
                       </div>
 
                       <div class="md-form">

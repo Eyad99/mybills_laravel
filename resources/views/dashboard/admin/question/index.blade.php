@@ -58,7 +58,7 @@
 
 
 
-                <table class="table table-bordered table-responsive-md table-responsive-sm table-striped text-center">
+                <table class="table table-bordered table-responsive-md table-responsive-sm table-responsive-lg table-striped text-center">
                     <thead>
                     <tr>
                         <th class="text-center">@lang('site.id_question')</th>

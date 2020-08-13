@@ -19,17 +19,12 @@ class contactusController extends Controller
     }
 
 
-
     public function store(Request $request,User $user_Id)
     {
-
         $request->validate([
             'text_question' => 'required|string|max:255',
         ]);
-
-
         $request_data = $request->all();
-
         $request_data['status_view'] = '0';
         $request_data['center_type'] = '3';
         $request_data['text_question_en'] = 'null';

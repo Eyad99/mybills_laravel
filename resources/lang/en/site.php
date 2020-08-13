@@ -71,6 +71,7 @@ return [
     'msg_edit' => 'Has Been Edit Successfully',
     'msg_delete' => 'Has Been Deleted Successfully',
     'msg_send' => 'Has Been Send Successfully', 
+    'msg_not_complete' => 'Id Bank And Id Number Do Not Match',
 
     'center_name_t' =>'Center Name',
     'center_name' =>'Center Name Arabic',

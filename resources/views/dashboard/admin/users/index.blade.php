@@ -1,10 +1,8 @@
-
 @extends('layouts.dashboard.app')
 @section('title',__('site.admins'))
 @section('content')
 
 @if(session()->has('success'))
-
     <div class="alert alert-info">
         {{session()->get('success')}}
     </div>
@@ -64,17 +62,17 @@
                     <td class="pt-3-half">{{$user->created_at}}</td>
                     <td class="pt-3-half">
                         @if(auth()->user()->hasPermission('update_users'))
-                        <span class="table-edit mt-2 mr-2"><a href="{{route('dashboard.user.edit',$user->id)}}" class="text-warning"><i
-                            class="fas fa-edit fa-2x" aria-hidden="true"></i></a>
+                        <span class="table-edit mt-2 mr-2"><a href="{{route('dashboard.user.edit',$user->id)}}" class="text-warning">
+                            <i class="fas fa-edit fa-2x" aria-hidden="true"></i></a>
                         </span>
                         @endif
 
                         @if(auth()->user()->hasPermission('delete_users'))
-                        <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan active-cyan-2 mt-2" action="{{route('dashboard.user.destroy',$user->id)}}" method="post">
+                        <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" action="{{route('dashboard.user.destroy',$user->id)}}" method="post">
                             @method('DELETE')
                             @csrf
                             <span class="table-add mt-2 mr-2">
-                                <button class="btn btn-link m-auto p-0">  <a href="{{route('dashboard.user.destroy',$user->id)}}" class="text-danger"><i class="fas fa-trash fa-2x" aria-hidden="true"></i></a></button>
+                                <button class="btn btn-link m-auto p-0"><a href="{{route('dashboard.user.destroy',$user->id)}}" class="text-danger"><i class="fas fa-trash fa-2x" aria-hidden="true"></i></a></button>
                             </span>
                         </form>
 

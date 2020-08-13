@@ -28,7 +28,7 @@
 
 
 
-            <table class="table table-bordered table-responsive-md table-responsive-sm table-striped text-center">
+            <table class="table table-bordered table-striped  text-center">
                 <thead>
                 <tr>
                     <th class="text-center">@lang('site.id_question')</th>
@@ -104,7 +104,7 @@
                 @empty
                 <tr>
                 <td class="pt-3-half">
-                    <td class="pt-3-half text-center" colspan="8">empty.</td>
+                    <td class="pt-3-half text-center" colspan="4">empty.</td>
                 </td>
                 </tr>
 

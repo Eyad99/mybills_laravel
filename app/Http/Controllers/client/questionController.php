@@ -38,7 +38,6 @@ class questionController extends Controller
             'text_question' => 'required|string|max:255',
             'center_type' => 'required|numeric',
         ]);
-
         $request_data = $request->all();
         $request_data['status_view'] = '0';
         $request_data['text_question_en'] = 'null';
