@@ -17,9 +17,6 @@
                         <label for="form10">@lang('site.text_questions')</label>
                       </div>
                
-
-
-
                     <div class="md-form">
                             <div class="form-check form-check-inline mr-2">
                             <input type="radio" class="form-check-input"  value="0" name="center_type" id="water">

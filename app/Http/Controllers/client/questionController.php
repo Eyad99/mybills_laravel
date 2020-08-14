@@ -32,6 +32,7 @@ class questionController extends Controller
     {
         return  view('client.question.newQestion');
     } //end create
+    
     public function store(Request $request)
     {
         $request->validate([

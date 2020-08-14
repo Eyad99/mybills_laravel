@@ -89,15 +89,33 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          @if(auth()->user()->hasPermission('read_users'))
           <li class="nav-item">
             <a class="nav-link" href="{{route('dashboard.user.index')}}">@lang('site.user')</a>
           </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#!">@lang('site.user')</a>
+          </li>
+          @endif
+          @if(auth()->user()->hasPermission('read_places'))
           <li class="nav-item">
             <a class="nav-link" href="{{route('dashboard.place.index')}}">@lang('site.place')</a>
           </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#!">@lang('site.place')</a>
+          </li>
+          @endif
+          @if(auth()->user()->hasPermission('read_questions'))
           <li class="nav-item">
             <a class="nav-link con-notifications" href="{{route('dashboard.question.index')}}">@lang('site.question')</a>
           </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link con-notifications disabled" href="#!">@lang('site.question')</a>
+          </li>
+          @endif
 
         </ul>
 

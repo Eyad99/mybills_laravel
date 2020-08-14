@@ -89,12 +89,12 @@
 
                      <!--start permissions section-->
                      <?php $models=['users','places','questions'];?>
-                     <?php $options=['create','read','update','delete','send'];?>
+                     <?php $options=['create','read','delete','update','send'];?>
 
                     <table class="table table-bordered table-striped ">
                         <thead>
                         <tr>
-                            <th class="text-center"><h6 class="text-uppercase font-weight-bold  ">@lang('site.permission')</h6></th>
+                            <th class="text-center"><h6 class="text-uppercase font-weight-bold">@lang('site.permission')</h6></th>
                         </tr>
                         </thead>
 
@@ -104,12 +104,14 @@
                             <td class="pt-3-half">@lang('site.' . $model)</td>
                         </tr>
                         <tr>
+                          
                             <td class="pt-3-half">
 
                                 @foreach($options as $option)
-                                    @if ($option=='send' && ($model=='users' || $model=='places'))
+                                    @if ($option=='send' && ($model=='users' || $model=='places') || $option=='update' && ($model=='places'))
                                     <div >&nbsp;</div>
                                     @else
+                                 
                                     
                                     <input class=" ml-2" type="checkbox" name="permissions[]" value="{{$option}}_{{$model}}">
                                     <label class=" ml-2">@lang('site.'.$option)</label>

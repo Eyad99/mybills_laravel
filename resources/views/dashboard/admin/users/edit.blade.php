@@ -79,7 +79,7 @@
 
                      <!--start permissions section-->
                      <?php $models=['users','places','questions'];?>
-                     <?php $options=['create','read','update','delete','send'];?>
+                     <?php $options=['create','read','delete','update','send'];?>
 
                     <table class="table table-bordered table-striped ">
                         <thead>
@@ -97,8 +97,8 @@
                             <td class="pt-3-half">
 
                                 @foreach($options as $option)
-                                @if ($option=='send' && ($model=='users' || $model=='places'))
-                                 <div >&nbsp;</div>
+                                @if ($option=='send' && ($model=='users' || $model=='places') || $option=='update' && ($model=='places'))
+                                <div >&nbsp;</div>
                                 @else
                                 <input class=" ml-2" type="checkbox" name="permissions[]" value="{{$option}}_{{$model}}" {{$user->can($option.'_'.$model)?'checked':''}}>
 

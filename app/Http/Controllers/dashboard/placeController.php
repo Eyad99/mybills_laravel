@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class placeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:create_questions')->only('create');
+        $this->middleware('permission:read_questions')->only('index');
+        $this->middleware('permission:delete_questions')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -28,6 +34,10 @@ class placeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function show()
+    {}
+    
     public function create()
     {
         return view('dashboard.admin.place.create');

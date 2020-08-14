@@ -12,7 +12,7 @@
     border-bottom: 1px solid #999999;
     margin-bottom: 15px;
   }
-  .faq li.active .answer {
+  /* .faq li.active .answer {
     max-height: 275px !important;
     padding-bottom: 25px;
     transition: max-height 0.5s ease, padding-bottom 0.5s ease;
@@ -20,9 +20,9 @@
   .faq li.active .question {
     color: #808080;
     transition: color 0.5s ease;
-  }
+  } */
   .faq .answer {
-    color: #090909;
+    color: #17A2B8;
     font-family: serif;
     font-size: 16px;
     line-height: 24px;
@@ -30,7 +30,7 @@
     overflow: hidden;
     transition: max-height 0.5s ease, padding-bottom 0.5s ease;
   }
-  .faq .plus-minus-toggle {
+  /* .faq .plus-minus-toggle {
     cursor: pointer;
     height: 21px;
     position: absolute;
@@ -57,7 +57,7 @@
   }
   .faq .plus-minus-toggle.collapsed:before {
     transform: rotate(180deg);
-  }
+  } */
   .faq .question {
     color: #090909;
     font-size: 14px;

@@ -89,115 +89,114 @@
       <a class="navbar-brand" href="#"><img src="{{asset('image/svg/logo.svg')}}" width="170"></a>
 
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-        aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+          aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-        <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav mr-auto">
 
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('home')}}">@lang('site.home')
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="{{route('home')}}">@lang('site.home')
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
 
-          @if(!(Auth::user()->hasRole('admin')||Auth::user()->hasRole('super_admin')))
+            @if(!(Auth::user()->hasRole('admin')||Auth::user()->hasRole('super_admin')))
 
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('places.index')}}">@lang('site.place')</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link con-notifications" href="{{route('Question.index')}}">@lang('site.question')</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link con-notifications" href="{{route('about')}}">@lang('site.about')</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link con-notifications" href="{{route('Contactus.index')}}">@lang('site.contactus')</a>
-          </li>
-          @endif
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('places.index')}}">@lang('site.place')</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link con-notifications" href="{{route('Question.index')}}">@lang('site.question')</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link con-notifications" href="{{route('about')}}">@lang('site.about')</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link con-notifications" href="{{route('Contactus.index')}}">@lang('site.contactus')</a>
+            </li>
+            @endif
 
-          @if(Auth::user()->hasRole('admin')||Auth::user()->hasRole('super_admin'))
-          <li class="nav-item">
-            <a class="nav-link con-notifications" href="{{route('dashboard.admin')}}">@lang('site.controlpanel')</a>
-          </li>
-          @endif
+            @if(Auth::user()->hasRole('admin')||Auth::user()->hasRole('super_admin'))
+            <li class="nav-item">
+              <a class="nav-link con-notifications" href="{{route('dashboard.admin')}}">@lang('site.controlpanel')</a>
+            </li>
+            @endif
 
-        </ul>
+          </ul>
 
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item avatar dropdown">
-           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-globe-asia"></i></a>
-             <ul class="dropdown-menu">
-                 <li>
-                     <ul class="menu">
-                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                             <li class="d-inline">
-                                 <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                     {{ $properties['native'] }}
-                                 </a>
-                             </li>
-                         @endforeach
-                     </ul>
-                 </li>
-             </ul>
-        </li>
-
-        @if(auth()->user()->verified())
-
+          <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item avatar dropdown">
-
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"><span class="span-Basket one-span-Basket "></span>{{Auth::user()->name}}
-              <i class="fas fa-user"></i>
-
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
-              aria-labelledby="navbarDropdownMenuLink-55">
-               <a class="dropdown-item con-span-basket"
-                       data-target=".bd-example-modal-lg"
-                       data-toggle="modal"
-                       href="{{route('home')}}"><i class="fas fa-shopping-basket"></i> @lang('site.Basket')
-                        <span class="span-Basket"></span>
-                    </a>
-                <a class="dropdown-item" href="{{route('Client.edit',auth()->id())}}" >@lang('site.Accountsettingschanged') </a>
-                 <a class="dropdown-item" href="#">@lang('site.totalbalance'): {{file_get_contents("http://localhost/bemoBank/public/api/getAccountInformation/".Auth::user()->bank_id)}}</a> 
-                <a class="dropdown-item" href="/logout" >@lang('site.logout')</a>
-            </div>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-globe-asia"></i></a>
+              <ul class="dropdown-menu">
+                  <li>
+                      <ul class="menu">
+                          @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                              <li class="d-inline">
+                                  <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                      {{ $properties['native'] }}
+                                  </a>
+                              </li>
+                          @endforeach
+                      </ul>
+                  </li>
+              </ul>
           </li>
-          @else
-          <li class="nav-item avatar dropdown ">
 
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"><span class="span-Basket one-span-Basket"></span>{{Auth::user()->name}}
-              <i class="fas fa-user"></i>
+          @if(auth()->user()->verified())
 
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary "
-              aria-labelledby="navbarDropdownMenuLink-55">
-               <a class="dropdown-item con-span-basket disabled"
-                       data-target=".bd-example-modal-lg"
-                       data-toggle="modal"
-                       href="{{route('home')}}"><i class="fas fa-shopping-basket"></i> @lang('site.Basket')
-                        <span class="span-Basket "></span>
-                    </a>
-                <a class="dropdown-item disabled" href="{{route('Client.edit',auth()->id())}}" >@lang('site.Accountsettingschanged') </a>
-                 <a class="dropdown-item disabled" href="#">@lang('site.totalbalance'): {{file_get_contents("http://localhost/bemoBank/public/api/getAccountInformation/".Auth::user()->bank_id)}}</a> 
-                <a class="dropdown-item" href="/logout" >@lang('site.logout')</a>
-            </div>
-          </li>
-          @endif
+            <li class="nav-item avatar dropdown">
+
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"><span class="span-Basket one-span-Basket "></span>{{Auth::user()->name}}
+                <i class="fas fa-user"></i>
+
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+                aria-labelledby="navbarDropdownMenuLink-55">
+                <a class="dropdown-item con-span-basket"
+                        data-target=".bd-example-modal-lg"
+                        data-toggle="modal"
+                        href="{{route('home')}}"><i class="fas fa-shopping-basket"></i> @lang('site.Basket')
+                          <span class="span-Basket"></span>
+                      </a>
+                  <a class="dropdown-item" href="{{route('Client.edit',auth()->id())}}" >@lang('site.Accountsettingschanged') </a>
+                  <a class="dropdown-item" href="#">@lang('site.totalbalance'): {{file_get_contents("http://localhost/bemoBank/public/api/getAccountInformation/".Auth::user()->bank_id)}}</a> 
+                  <a class="dropdown-item" href="/logout" >@lang('site.logout')</a>
+              </div>
+            </li>
+            @else
+            <li class="nav-item avatar dropdown ">
+
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"><span class="span-Basket one-span-Basket"></span>{{Auth::user()->name}}
+                <i class="fas fa-user"></i>
+
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary "
+                aria-labelledby="navbarDropdownMenuLink-55">
+                <a class="dropdown-item con-span-basket disabled"
+                        data-target=".bd-example-modal-lg"
+                        data-toggle="modal"
+                        href="{{route('home')}}"><i class="fas fa-shopping-basket"></i> @lang('site.Basket')
+                          <span class="span-Basket "></span>
+                      </a>
+                  <a class="dropdown-item disabled" href="{{route('Client.edit',auth()->id())}}" >@lang('site.Accountsettingschanged') </a>
+                  <a class="dropdown-item disabled" href="#">@lang('site.totalbalance'): {{file_get_contents("http://localhost/bemoBank/public/api/getAccountInformation/".Auth::user()->bank_id)}}</a> 
+                  <a class="dropdown-item" href="/logout" >@lang('site.logout')</a>
+              </div>
+            </li>
+            @endif
 
 
-        </ul>
+          </ul>
       </div>
-
     </nav>
 <!--/.Navbar -->
 
-      <div class="container">
+    <div class="container">
           <div class="container">
 
              @if(session()->has('all_msg_results_pay'))
@@ -250,12 +249,8 @@
                     </div>
                 </div>
             </div>
-
-
-
         @yield('content')
-
- </div>
+      </div>
 
 
       <!-- Footer -->
